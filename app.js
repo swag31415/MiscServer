@@ -1,8 +1,12 @@
 const express = require("express")
 const https = require("https")
 const cors = require("cors")
+var bodyParser = require('body-parser')
 const app = express()
   .set("view engine", "ejs")
+  .use(express.static('public'))
+  .use(bodyParser.urlencoded({ extended: false }))
+  .use(bodyParser.json())
 const port = process.env.PORT || 3000
 
 app.use(cors({origin: '*'}))
