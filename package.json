@@ -10,6 +10,8 @@
   "author": "swag31415 <kidswagatam18@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "@tensorflow-models/universal-sentence-encoder": "^1.3.3",
+    "@tensorflow/tfjs-node": "^3.12.0",
     "cors": "^2.8.5",
     "ejs": "^3.1.6",
     "express": "^4.17.2"
