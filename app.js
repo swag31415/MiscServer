@@ -1,8 +1,11 @@
 const express = require("express")
 const https = require("https")
+const cors = require("cors")
 const app = express()
   .set("view engine", "ejs")
 const port = process.env.PORT || 3000
+
+app.use(cors({origin: '*'}))
 
 app.get("/", (req, res) => {
   res.render("index")
