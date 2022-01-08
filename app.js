@@ -34,7 +34,16 @@ app.post("/helpful", (req, res) => {
     // Sort the advice and return the top 50
     sorted = Object.keys(advice).sort((a, b) => advice[b]-advice[a])
     res.json(sorted.slice(0, 50))
-  })
+  }).catch(err => res.json([]))
+})
+
+// Prabhu
+const prabhu_api = require("./src/prabhu_api.js")
+app.get("/prabhu", (req, res) => {
+  prabhu_api.ask(req.query.query, req.query.book).then(verses => {
+    // Return the top 10 results
+    res.json(verses.slice(0, 10))
+  }).catch(err => res.json([]))
 })
 
 app.listen(port, () => {
