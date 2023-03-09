@@ -1,7 +1,7 @@
 {
   "name": "MiscServer",
   "version": "1.0.0",
-  "description": "A heroku server that runs all the various things I might need a server for",
+  "description": "A render server that runs all the various things I might need a server for",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
